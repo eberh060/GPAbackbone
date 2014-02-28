@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> head}}
+</head>
+<body data-spy="scroll" data-target=".navbar">
+{{> navbar}}
+    <div class="container">
+        {{{ yield }}}
+        <p id="GPADisplay"></p>
+    </div>
+{{> templates }}
+{{> scripts}}
+
+</body>
+</html>

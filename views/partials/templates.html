@@ -1,0 +1,39 @@
+<script id="section-template" type="text/html">
+    <h2 id="<%= htmlId %>" class="fixlink"><a href="<%= link %>"><%= title %> </a>
+        <button class="btn btn-danger text-right pull-right delete">Delete</button>
+        <button class="btn btn-default text-right pull-right edit">Edit</button>
+
+    </h2>
+
+    <p><%= body %></p>
+
+</script>
+
+<script id="section-edit-template" type="text/html">
+    <h2 id="<%= htmlId %>" class="fixlink" ><a href="<%= link %>"><%= title %></a>
+        <button class="btn btn-success text-right pull-right save">Save</button>
+    </h2>
+
+    <textarea name="body" class="form-control" rows="4"><%= body %></textarea>
+</script>
+
+<script id="section-create-template" type="text/html">
+    <div class="well">
+        <button id="add-save-button" class="btn btn-primary create">Add new Section</button>
+        <form id="create-form" hidden="true">
+
+            <label for="title">Section title</label>
+            <input class="form-control" name="title" placeholder="" type="text" />
+
+            <label for="htmlId">Html element id (for navbar link)</label>
+            <input class="form-control" name="htmlId" placeholder="" type="text" />
+
+            <label for="body">Section content</label>
+            <textarea name="body" class="form-control" placeholder="" rows="4" type="text"></textarea>
+
+            <label for="link">Section link</label>
+            <input class="form-control" name="link" placeholder="" type="text" />
+
+        </form>
+    </div>
+</script>
